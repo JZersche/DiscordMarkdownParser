@@ -274,20 +274,11 @@ function updatePreview() {
   const containsCarriageReturn = markdownText.includes('\n');
   convertText(lines);
 
-// Array of common HTML tags
-const htmlTags = ['div', 'span', 'p', 'a', 'strong', 'em', 'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
-// Function to check if the input contains any common HTML tags
-function containsHTMLTags(str) {
-    const regex = new RegExp(`<(${htmlTags.join('|')})[\\s\\S]*>`, 'i');
-    return regex.test(str);
-}
-
-// Check if convertedText contains common HTML tags
-if (containsHTMLTags(convertedText)) {
-    // If it contains HTML tags, encode it
-    //convertedText = encodeURIComponent(convertedText);
-		console.log('Line 290 Contains HTML Code');
+const regex2 = /^(?!<div\s*class="discord_).*$/gm;
+// Check if convertedText contains <div> and </div>
+if (convertedText.match(regex2) && convertedText.includes('</div>')) {
+convertedText = convertedText.replace(/<div/g, '<code>&lt;div').replace(/<\/div>/g, '&lt;/div&gt;</code>');
 }
 
   output.innerHTML = `<div class="converted-text"><code><pre>${convertedText}</pre></code></div>`;
