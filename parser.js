@@ -285,9 +285,9 @@ function containsHTMLTags(str) {
 
 // Check if convertedText contains common HTML tags
 if (containsHTMLTags(convertedText)) {
-    // If it contains HTML tags, replace them with HTML entities
-    convertedText = convertedText.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-		console.log('Line 290 : Contains HTML Tags');
+    // If it contains HTML tags, encode it
+    //convertedText = encodeURIComponent(convertedText);
+		console.log('Line 290 Contains HTML Code');
 }
 
   output.innerHTML = `<div class="converted-text"><code><pre>${convertedText}</pre></code></div>`;
