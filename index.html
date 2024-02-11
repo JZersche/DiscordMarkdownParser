@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="parser.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title>Styled Blocks</title>
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="block">
+        <span class="header">Discord Markdown to HTML</span>
+        <div class="inner-block">
+          <button class="boldBtn"><i class="fas fa-bold"></i></button>
+        </div>
+        <div class="form-container">
+          <form id="markdown-form">
+            <label for="markdown-input" style="color:#fff;"></label>
+
+            <textarea placeholder="Enter Discord Markdown" id="markdown-input"></textarea>
+
+
+            <input type="submit" value="Convert" class="convertBtn">
+          </form>
+          <div id="converted-output">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+</html>
