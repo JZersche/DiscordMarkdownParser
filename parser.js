@@ -185,8 +185,12 @@ function convertText(lines) {
       return `<h2 class="discord_HeaderM">${line.substring(3)}</h2>`; 
 }
 else if (line.startsWith('### ')) {
-      return `<h5 class="discord_HeaderS">${line.substring(4)}</h5>`;
-    } else if (line.startsWith('**')) {
+      return `<h3 class="discord_HeaderS">${line.substring(4)}</h3>`;
+    } 
+		else if (line.startsWith('#### ')) {
+      return `<h4 class="discord_HeaderXL">${line.substring(5)}</h4>`;
+    } 
+else if (line.startsWith('**')) {
       // Handle **text** and **text** separately
       let modifiedLine = line;
       const length = line.length;
