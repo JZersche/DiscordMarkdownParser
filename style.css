@@ -9,11 +9,14 @@ body {
 }
 
 strong {
-  color: #eee;
+  color: #fff;
   font-family: 'Segoe UI';
-  font-size: 14px;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.50px;
 }
 
+.discord_HeaderXL,
 .discord_HeaderL,
 .discord_HeaderM,
 .discord_HeaderS {
@@ -22,9 +25,8 @@ strong {
   display: inline-block;
 }
 
-.discord_HeaderS {
-color:#fff;
-font-size:13px;
+.discord_HeaderXL {
+  color: #fff;
 }
 
 li {
@@ -162,7 +164,6 @@ li {
   display: block;
   top: 0px;
   padding: 8px;
-
 }
 
 pre {
